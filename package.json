@@ -1,0 +1,17 @@
+{
+  "name": "instanews",
+  "version": "1.0.0",
+  "description": "Single page responsive website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeremiah",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-terser": "^1.1.7"
+  }
+}
