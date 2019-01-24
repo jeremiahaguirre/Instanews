@@ -5,7 +5,7 @@ $(function() {
 let sectionName = request(".selection".val());
 
 $("select").on("click", function() {
-  $(".slide-menu").before("<p class='wait'>Loading</p>");
+  $(".info-section").before(".loading");
   $.ajax({
     method: "GET",
     url:
@@ -25,6 +25,6 @@ $("select").on("click", function() {
       $(".first-select").append("Couldn't load");
     })
     .always(function() {
-      $(".wait").remove();
+      $(".loading").remove();
     });
 });
