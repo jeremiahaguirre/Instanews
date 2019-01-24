@@ -1,10 +1,13 @@
 // Require Gulp first!
-const gulp = require("gulp");
+const gulp = require("gulp"),
+  rename = require("gulp-rename"),
+  terser = require("gulp-terser"),
+  uglifycss = require("gulp-uglifycss"),
+  browserSync = require("browser-sync").create(),
+  eslint = require("gulp-eslint"),
+  prettyError = require("gulp-prettyerror");
 
-//Terser Package
-// Now that we've installed the terser package we can require it:
-const terser = require("gulp-terser"),
-  rename = require("gulp-rename");
+// Terser Package minify js
 gulp.task("scripts", function() {
   return gulp
     .src("./js/*.js") // What files do we want gulp to consume?
@@ -13,29 +16,44 @@ gulp.task("scripts", function() {
     .pipe(gulp.dest("./build/js")); // Where do we put the result?
 });
 
-//Gulp Browser Sync Package
-var browserSync = require("browser-sync").create();
-
-gulp.task("css", function() {
+//Minify css
+gulp.task("css-files", function() {
   return gulp
-    .src("css/*css")
-    .pipe(browserify())
-    .pipe(uglify())
-    .pipe(gulp.dest("build/css"));
+    .src("./css/*.css") // What files do we want gulp to consume?
+    .pipe(uglifycss()) // Call the terser function on these files
+    .pipe(rename({ extname: ".min.css" })) // Rename the uglified file
+    .pipe(gulp.dest("./build/css")); // Where do we put the result?
 });
 
-gulp.task("css-watch", ["css"], function(done) {
-  browserSync.reload();
+//Watch for changes
+gulp.task("watch", function(done) {
+  gulp.watch("js/*.js", gulp.series("lint", "scripts"));
+  gulp.watch("css/*.css", gulp.series("css-files"));
+
   done();
 });
 
-gulp.task("browser-sync", ["css"], function() {
+// //Gulp Browser Sync Package
+gulp.task("browser-sync", function(done) {
   browserSync.init({
     server: {
       baseDir: "./"
     }
   });
-  gulp.watch("css/*.css", ["css-watch"]);
+  gulp
+    .watch(["build/css/*.css", "build/js/*.js"])
+    .on("change", browserSync.reload);
+  done();
 });
 
-gulp.task("default", gulp.parallel("scripts", "browser-sync", "css-watch"));
+//Linting
+gulp.task("lint", function() {
+  return gulp
+    .src("js/*.js")
+    .pipe(prettyError())
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failOnError());
+});
+
+gulp.task("default", gulp.parallel("watch", "browser-sync"));

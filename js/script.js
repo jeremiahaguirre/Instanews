@@ -1,0 +1,30 @@
+$(function() {
+  console.log("Welcome to Instanews");
+});
+
+let sectionName = request(".selection".val());
+
+$("select").on("click", function() {
+  $(".slide-menu").before("<p class='wait'>Loading</p>");
+  $.ajax({
+    method: "GET",
+    url:
+      "https://api.nytimes.com/svc/topstories/v2/" +
+      sectionName +
+      ".json?api-key=noZerIXUAIZvYVXkARxs4Jc06FKYpAsE"
+  })
+    .done(function(data) {
+      console.log(data);
+      $.each(data, function(key, value) {
+        $(".drop-down").append(value.results);
+        console.log(value);
+        /* Append your list items here */
+      });
+    })
+    .fail(function() {
+      $(".first-select").append("Couldn't load");
+    })
+    .always(function() {
+      $(".wait").remove();
+    });
+});
