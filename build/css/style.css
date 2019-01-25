@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "Open Sans-Light";
+  src: url("/build/css/fonts/OpenSans-Light.eot");
+  src: url("/build/css/fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("/build/css/fonts/OpenSans-Light.woff") format("woff"), url("/build/css/fonts/OpenSans-Light.ttf") format("truetype"), url("/build/css/fonts/OpenSans-Light.svg") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+html {
+  font-size: 16px; }
+
+body {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Open Sans-Light";
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.logo {
+  padding-top: 30%;
+  height: auto;
+  max-width: 100%;
+  text-align: center; }
+
+form p {
+  font-family: "Open Sans-Light";
+  color: white;
+  margin: 10px; }
+
+.slide-menu {
+  font-family: "Open Sans-Light";
+  height: 27px;
+  width: 114px;
+  margin: 10px;
+  font-size: 16px; }
+  .slide-menu.focus, .slide-menu.active {
+    outline: none; }
+
+footer {
+  font-family: "Open Sans-Light";
+  display: inline-block;
+  color: #c2c2c2; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   
+   CSS Reset
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
