@@ -8,6 +8,7 @@
   },
   "author": "Jeremiah",
   "license": "ISC",
+  "repository": "https://jeremiahaguirre.github.io/aloha-project/aloha.html",
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",

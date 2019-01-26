@@ -16,7 +16,7 @@ $(function() {
 
   $("#me-select-menu").on("change", function() {
     const sectionName = $(this).val();
-
+    //make function for loader before appending img empty ul then append img
     //if section is empty, return
     //show loader
     $(".image").before(
@@ -32,21 +32,44 @@ $(function() {
         sectionName +
         ".json?api-key=noZerIXUAIZvYVXkARxs4Jc06FKYpAsE",
       dataType: "json"
-    }).done(function(data) {
-      console.log(data);
-      //append all things
-      $.each(data.resutls, function(index, value) {
-        $(".drop-down").append(value[0]);
+    })
+      .done(function(data) {
         console.log(data);
-      })
-        .fail(function() {
-          // $('.into-section').empty();
-          // $(".info-section").append("Couldn' load. Please try again later");
-          $(".loading").remove();
-        })
-        .always(function() {
-          $(".loading").remove();
+        const sliceData=data.results.slice(0,12)
+        //append all things
+        //1. Creath a .each to run a function for eah article in response.results
+        //2. Check the article has and image
+        //3. for each article - Create constants for the image URL, title, and link
+        //4. Make an HTLM string for the article, using the constants we just created
+        //5. Append string to story section
+
+        $.each(sliceData, function(index, value) {
+         console.log(value);
+          if (value.multimedia[4] !== undefined) {
+            // $('.ul-info').empty();
+            $(".ul-info").append(
+              htmlChange(value.url, value.multimedia[4].url, value.abstract)
+            );
+            console.log(htmlChange(value.url, value.multimedia[0].url, value.abstract)
+            );
+          }
+          function htmlChange(url, multimedia, abstract) {
+            return (
+              "<li class='info-list-item'>"+"<a class='info-href' target='_blank' href=" + url + ">"+
+              "<img class='info-img' src=" + multimedia + ">"+
+              "<li class='info-text'>" + abstract + "</li>"+
+              "</a>"+"</li>"
+            );
+          }
+          // $('.info-href').break(data.multimedia[0]);
         });
-    });
+      })
+      .fail(function() {
+        $(".info-section").empty();
+        $(".info-section").append("Couldn't load. Please try again later");
+      })
+      .always(function() {
+        $(".loading").remove();
+      });
   });
 });
