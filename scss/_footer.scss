@@ -1,5 +1,9 @@
 footer {
   font-family: "Open Sans-Light";
   display: inline-block;
+  flex-wrap: wrap;
+  margin: 10px;
   color: #c2c2c2;
+  min-width: 400px;
+  margin-top: 10px;
 }

@@ -16,6 +16,7 @@ $(function() {
 
   $("#me-select-menu").on("change", function() {
     const sectionName = $(this).val();
+    $(".ul-info").empty();
     //make function for loader before appending img empty ul then append img
     //if section is empty, return
     //show loader
@@ -35,7 +36,7 @@ $(function() {
     })
       .done(function(data) {
         console.log(data);
-        const sliceData=data.results.slice(0,12)
+        const sliceData = data.results.slice(0, 12);
         //append all things
         //1. Creath a .each to run a function for eah article in response.results
         //2. Check the article has and image
@@ -44,24 +45,35 @@ $(function() {
         //5. Append string to story section
 
         $.each(sliceData, function(index, value) {
-         console.log(value);
+          console.log(value);
+
           if (value.multimedia[4] !== undefined) {
-            // $('.ul-info').empty();
+            
             $(".ul-info").append(
               htmlChange(value.url, value.multimedia[4].url, value.abstract)
             );
-            console.log(htmlChange(value.url, value.multimedia[0].url, value.abstract)
+            console.log(
+              htmlChange(value.url, value.multimedia[0].url, value.abstract)
             );
           }
+          
           function htmlChange(url, multimedia, abstract) {
             return (
-              "<li class='info-list-item'>"+"<a class='info-href' target='_blank' href=" + url + ">"+
-              "<img class='info-img' src=" + multimedia + ">"+
-              "<li class='info-text'>" + abstract + "</li>"+
-              "</a>"+"</li>"
+              /*"<li class='info-list-item'>" +
+              "<a class='info-href' target='_blank' href=" +
+              url +
+              ">" +*/
+              "<img class='info-img' src=" +
+              multimedia +
+              ">" /*+
+              "<p class='info-text'>" +
+              abstract +
+              "</p>" +
+              "</a>" +
+              "</li>"*/
             );
+            
           }
-          // $('.info-href').break(data.multimedia[0]);
         });
       })
       .fail(function() {

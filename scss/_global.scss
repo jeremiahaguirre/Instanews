@@ -1,5 +1,10 @@
 html {
-  font-size: 16px;
+  font-size: $standerd-font;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
 }
 
 body {
@@ -7,7 +12,6 @@ body {
   font-family: "Open Sans-Light";
   background-color: black;
   display: flex;
-  height: 100vh;
   text-align: center;
   justify-content: center;
 }
