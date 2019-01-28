@@ -15,18 +15,17 @@ header {
     padding-top: unset;
   }
 
-  @include desktop{
-    padding-left:10%;
+  @include desktop {
+    padding-left: 10%;
   }
 
-
-  .image-header{
-  @include tablet {
-    flex-direction: row;
-    width: 400px;
-    padding-left: 20%;
-    padding-top: unset;
-  }
+  .image-header {
+    @include tablet {
+      flex-direction: row;
+      width: 400px;
+      padding-left: 20%;
+      padding-top: unset;
+    }
   }
   .logo {
     display: block;

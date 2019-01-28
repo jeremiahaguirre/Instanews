@@ -27,26 +27,24 @@ $(function() {
     })
       .done(function(data) {
         console.log(data);
-        const imageOnly = data.results.filter(function(item){
+        const imageOnly = data.results.filter(function(item) {
           console.log(item);
-          if (item.multimedia[4] !==undefined){
-            return true
-          }else{
-            return false
+          if (item.multimedia[4] !== undefined) {
+            return true;
+          } else {
+            return false;
           }
- });
+        });
         const sliceData = imageOnly.slice(0, 12);
         $.each(sliceData, function(index, value) {
           console.log(value);
 
-          
-            $(".ul-info").append(
-              htmlChange(value.url, value.multimedia[4].url, value.abstract)
-            );
-            console.log(
-              htmlChange(value.url, value.multimedia[0].url, value.abstract)
-            );
-        
+          $(".ul-info").append(
+            htmlChange(value.url, value.multimedia[4].url, value.abstract)
+          );
+          console.log(
+            htmlChange(value.url, value.multimedia[0].url, value.abstract)
+          );
 
           function htmlChange(url, multimedia, abstract) {
             return (

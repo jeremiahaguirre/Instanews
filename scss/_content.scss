@@ -30,13 +30,10 @@ select {
     padding-top: 1%;
   }
 
-
   .ul-info {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-
-   
   }
 
   .info-href {
@@ -58,7 +55,6 @@ select {
       display: block;
       padding-top: 25%;
     }
-    
 
     @include tablet {
       display: flex;
@@ -87,7 +83,7 @@ select {
       top: 70%;
     }
     @include desktop {
-      top:63%;
+      top: 63%;
     }
   }
 }
