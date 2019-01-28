@@ -10,9 +10,13 @@ header {
 
   @include tablet {
     flex-direction: row;
-    width: 400px;
-    padding-left: 20%;
+    width: 460px;
+    padding-left: 18%;
     padding-top: unset;
+  }
+
+  @include desktop{
+    padding-left:10%;
   }
 
 

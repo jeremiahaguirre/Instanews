@@ -171,9 +171,12 @@ header {
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
-      width: 400px;
-      padding-left: 20%;
+      width: 460px;
+      padding-left: 18%;
       padding-top: unset; } }
+  @media (min-width: 1000px) {
+    header {
+      padding-left: 10%; } }
   @media (min-width: 600px) {
     header .image-header {
       -webkit-box-orient: horizontal;
@@ -219,6 +222,9 @@ select {
   color: white;
   width: 100%;
   padding-top: 10%; }
+  @media (min-width: 600px) {
+    .info-section {
+      padding-top: 1%; } }
   .info-section .ul-info {
     list-style: none;
     display: -webkit-box;
@@ -269,8 +275,6 @@ select {
     color: white;
     text-align: left;
     position: absolute;
-    margin-left: 1em;
-    margin-right: 1em;
     font-size: 16px;
     padding: 1em;
     top: 60%; }
@@ -279,7 +283,7 @@ select {
         top: 70%; } }
     @media (min-width: 1000px) {
       .info-section .info-text {
-        top: 65%; } }
+        top: 63%; } }
 
 footer {
   display: -webkit-box;

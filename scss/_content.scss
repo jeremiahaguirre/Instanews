@@ -26,16 +26,17 @@ select {
   color: white;
   width: 100%;
   padding-top: 10%;
+  @include tablet {
+    padding-top: 1%;
+  }
+
 
   .ul-info {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
 
-    @include tablet {
-    
-    }
-
+   
   }
 
   .info-href {
@@ -78,8 +79,6 @@ select {
     color: white;
     text-align: left;
     position: absolute;
-    margin-left: 1em;
-    margin-right: 1em;
     font-size: 16px;
     padding: 1em;
     top: 60%;
@@ -88,7 +87,7 @@ select {
       top: 70%;
     }
     @include desktop {
-      top:65%;
+      top:63%;
     }
   }
 }
