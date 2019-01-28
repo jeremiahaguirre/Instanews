@@ -27,53 +27,49 @@ body {
           justify-content: center; }
 
 header {
-  display: inline-block;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  min-width: 400px; }
-  header .logo img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  header .logo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-item-align: auto;
-        align-self: auto;
-    height: auto;
     max-width: 100%;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
-            flex: 0 0 100%; }
+            flex: 0 0 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    text-align: center;
+    height: 230px;
+    margin-left: 460px; }
 
 .drop-down {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  margin-top: 10px; }
-
-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  form p {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 410px;
+  padding: 80px;
+  margin-bottom: 100px; }
+  .drop-down p {
     font-family: "Open Sans-Light";
     color: white;
     margin: 10px; }
 
 select {
   font-family: "Open Sans-Light";
-  height: 27px;
-  width: 114px;
-  margin: 10px;
-  font-size: 16px; }
+  font-size: 16px;
+  margin-left: 10px; }
   select:focus {
     outline: none; }
   select:active {
@@ -84,19 +80,20 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 100%;
-  max-height: 170px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-width: 400px;
+  max-height: auto;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  border: 4px solid white; }
   .info-section .info-img {
     text-align: center;
     background-size: cover, contain;
     border: 4px solid red;
     position: relative;
     overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
             flex: 1 0 100%;
@@ -105,16 +102,6 @@ select {
             align-items: center;
     width: 100%;
     min-height: 270px; }
-
-footer {
-  font-family: "Open Sans-Light";
-  display: inline-block;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 10px;
-  color: #c2c2c2;
-  min-width: 400px;
-  margin-top: 10px; }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126

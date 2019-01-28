@@ -1,15 +1,14 @@
 header {
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  min-width: 400px;
+  display: flex;
 
-  .logo img {
+  .logo {
     display: flex;
-    align-self: auto;
-    height: auto;
     max-width: 100%;
     flex: 0 0 100%;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    height: 230px;
+    margin-left: 460px;
   }
 }

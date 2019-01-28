@@ -13,6 +13,13 @@ $(function() {
   //4. Append that stuff to the DOM
   //5. If unsuccessful, show a helpful to the user in the UI
   //6. Hide the loader again
+  $(function() {
+    $("select").selectric({
+      maxHeight: 100,
+      openOnHover: true,
+      
+    });
+  });
 
   $("#me-select-menu").on("change", function() {
     const sectionName = $(this).val();
@@ -48,7 +55,6 @@ $(function() {
           console.log(value);
 
           if (value.multimedia[4] !== undefined) {
-            
             $(".ul-info").append(
               htmlChange(value.url, value.multimedia[4].url, value.abstract)
             );
@@ -56,7 +62,7 @@ $(function() {
               htmlChange(value.url, value.multimedia[0].url, value.abstract)
             );
           }
-          
+
           function htmlChange(url, multimedia, abstract) {
             return (
               /*"<li class='info-list-item'>" +
@@ -72,7 +78,6 @@ $(function() {
               "</a>" +
               "</li>"*/
             );
-            
           }
         });
       })
