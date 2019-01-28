@@ -1,14 +1,33 @@
 header {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 auto;
+  max-width: $container-max-width;
+  width: 100%;
+  padding-top: 20%;
 
+  @include tablet {
+    flex-direction: row;
+    width: 400px;
+    padding-left: 20%;
+  }
   .logo {
-    display: flex;
-    max-width: 100%;
-    flex: 0 0 100%;
-    align-items: center;
-    justify-content: flex-start;
+    display: block;
     text-align: center;
-    height: 230px;
-    margin-left: 460px;
+    width: 400px;
+
+    img {
+      width: 220px;
+      height: 220px;
+      max-width: 100%;
+      height: auto;
+
+      @include tablet {
+        width: 170px;
+        height: 170px;
+      }
+    }
   }
 }

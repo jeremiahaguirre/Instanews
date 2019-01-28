@@ -24,6 +24,7 @@ $(function() {
   $("#me-select-menu").on("change", function() {
     const sectionName = $(this).val();
     $(".ul-info").empty();
+    $(".image-header").addClass(".after-select");
     //make function for loader before appending img empty ul then append img
     //if section is empty, return
     //show loader
@@ -65,18 +66,15 @@ $(function() {
 
           function htmlChange(url, multimedia, abstract) {
             return (
-              /*"<li class='info-list-item'>" +
+              "<li class='info-list-item box' style='background-image: url("+multimedia+")'>" +
               "<a class='info-href' target='_blank' href=" +
               url +
-              ">" +*/
-              "<img class='info-img' src=" +
-              multimedia +
-              ">" /*+
+              ">"+
               "<p class='info-text'>" +
               abstract +
               "</p>" +
               "</a>" +
-              "</li>"*/
+              "</li>"
             );
           }
         });

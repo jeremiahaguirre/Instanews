@@ -2,16 +2,8 @@ html {
   font-size: $standerd-font;
 }
 
-.container {
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
 body {
-  align-items: center;
   font-family: "Open Sans-Light";
   background-color: black;
-  display: flex;
   text-align: center;
-  justify-content: center;
 }
