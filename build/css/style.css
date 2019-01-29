@@ -132,8 +132,8 @@ table {
 
 @font-face {
   font-family: "Open Sans-Light";
-  src: url("/build/css/fonts/OpenSans-Light.eot");
-  src: url("/build/css/fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("/build/css/fonts/OpenSans-Light.woff") format("woff"), url("/build/css/fonts/OpenSans-Light.ttf") format("truetype"), url("/build/css/fonts/OpenSans-Light.svg") format("svg");
+  src: url("./fonts/OpenSans-Light.eot");
+  src: url("./fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("./fonts/OpenSans-Light.woff") format("woff"), url("./fonts/OpenSans-Light.ttf") format("truetype"), url("./fonts/OpenSans-Light.svg") format("svg");
   font-weight: 300;
   font-style: normal; }
 
@@ -173,10 +173,14 @@ header {
               flex-direction: row;
       width: 460px;
       padding-left: 18%;
-      padding-top: unset; } }
+      padding-top: unset;
+      margin-top: 30%;
+      margin-left: 7%; } }
   @media (min-width: 1000px) {
     header {
-      padding-left: 10%; } }
+      padding-left: 10%;
+      margin-top: 20%;
+      margin-left: 27%; } }
   @media (min-width: 600px) {
     header .image-header {
       -webkit-box-orient: horizontal;
@@ -200,6 +204,10 @@ header {
           width: 170px;
           height: 170px; } }
 
+.after-select {
+  margin-top: unset;
+  margin-left: unset; }
+
 .drop-down {
   display: block;
   max-width: 220px;
@@ -212,7 +220,8 @@ header {
 select {
   font-family: "Open Sans-Light";
   font-size: 16px;
-  margin-left: 10px; }
+  margin-left: 10px;
+  font-size: 30px; }
   select:focus {
     outline: none; }
   select:active {

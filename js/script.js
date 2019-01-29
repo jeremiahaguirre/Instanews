@@ -11,7 +11,7 @@ $(function() {
     const sectionName = $(this).val();
     //clear stories
     $(".ul-info").empty();
-    $(".image-header").addClass(".after-select");
+    $(".img-header").addClass("after-select");
     //show loader
     $(".image").before(
       "<img class='loading' src='./images/ajax-loader.gif' width='50px' height='50px' />"

@@ -13,11 +13,17 @@ header {
     width: 460px;
     padding-left: 18%;
     padding-top: unset;
+    margin-top: 30%;
+    margin-left: 7%;
   }
 
   @include desktop {
     padding-left: 10%;
+    margin-top: 20%;
+    margin-left: 27%;
   }
+
+  
 
   .image-header {
     @include tablet {
@@ -44,4 +50,9 @@ header {
       }
     }
   }
+}
+
+.after-select {
+  margin-top: unset;
+  margin-left: unset;
 }

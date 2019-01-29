@@ -11,9 +11,9 @@
 }
 
 .selectric {
-  border: 1px solid #E0E0E0;
+  border: 1px solid #e0e0e0;
   border-bottom-width: 2px;
-  background: #F8F8F8;
+  background: #f8f8f8;
   position: relative;
   border-radius: 4px;
 }
@@ -25,7 +25,7 @@
   text-overflow: ellipsis;
   margin: 0 30px 0 0;
   padding: 6px;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 18px;
   color: #444;
   min-height: 18px;
@@ -38,24 +38,25 @@
   top: 0;
   width: 30px;
   height: 30px;
-  background: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgOCA1IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjgiIGhlaWdodD0iNSI+PHBhdGggZD0iTTcuNzgxIDEuNDQ0Yy0uMjgxLjMwNy0zLjIzOCAzLjMxMS0zLjIzOCAzLjMxMS0uMTUxLjE2NC0uMzQ3LjI0NS0uNTQ0LjI0NS0uMTk3IDAtLjM5NC0uMDgyLS41NDMtLjI0NSAwIDAtMi45NTctMy4wMDMtMy4yMzktMy4zMTEtLjI4MS0uMzA3LS4zLS44NTkgMC0xLjE4OC4zMDEtLjMyOC43MTktLjM1NCAxLjA4NyAwbDIuNjk1IDIuNzU1IDIuNjk0LTIuNzU1Yy4zNjgtLjM1NC43ODctLjMyOCAxLjA4NyAwIC4zMDEuMzI4LjI4Mi44ODEgMCAxLjE4N3oiIGZpbGw9IiNiYmIiLz48L3N2Zz4K) no-repeat 50%;
+  background: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgOCA1IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjgiIGhlaWdodD0iNSI+PHBhdGggZD0iTTcuNzgxIDEuNDQ0Yy0uMjgxLjMwNy0zLjIzOCAzLjMxMS0zLjIzOCAzLjMxMS0uMTUxLjE2NC0uMzQ3LjI0NS0uNTQ0LjI0NS0uMTk3IDAtLjM5NC0uMDgyLS41NDMtLjI0NSAwIDAtMi45NTctMy4wMDMtMy4yMzktMy4zMTEtLjI4MS0uMzA3LS4zLS44NTkgMC0xLjE4OC4zMDEtLjMyOC43MTktLjM1NCAxLjA4NyAwbDIuNjk1IDIuNzU1IDIuNjk0LTIuNzU1Yy4zNjgtLjM1NC43ODctLjMyOCAxLjA4NyAwIC4zMDEuMzI4LjI4Mi44ODEgMCAxLjE4N3oiIGZpbGw9IiNiYmIiLz48L3N2Zz4K)
+    no-repeat 50%;
   font: 0/0 a;
 }
 
-@media \0screen\,screen\9 {
+@media \0screen\, screen\9 {
   .selectric .button {
-    color: #DDD;
+    color: #ddd;
     text-align: center;
     font: 20px/30px Lucida Sans Unicode, Arial Unicode MS, Arial;
   }
 }
 
 .selectric-focus .selectric {
-  border-color: #AAA;
+  border-color: #aaa;
 }
 
 .selectric-hover .selectric {
-  border-color: #CCC;
+  border-color: #ccc;
 }
 
 .selectric-hover .selectric .button {
@@ -71,8 +72,8 @@
 }
 
 .selectric-open .selectric {
-  border-color: #CCC;
-  background: #F0F0F0;
+  border-color: #ccc;
+  background: #f0f0f0;
   margin-top: 1px;
   border-bottom-width: 1px;
 }
@@ -81,11 +82,11 @@
   visibility: visible;
   opacity: 1;
   -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-       -o-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .selectric-disabled {
@@ -93,9 +94,9 @@
   opacity: 0.5;
   cursor: default;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .selectric-hide-select {
@@ -157,14 +158,14 @@
   visibility: hidden;
   opacity: 0;
   -webkit-transform: translateY(-20px);
-      -ms-transform: translateY(-20px);
-       -o-transform: translateY(-20px);
-          transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -o-transform: translateY(-20px);
+  transform: translateY(-20px);
   position: absolute;
   top: 100%;
   left: 0;
   background: #fefefe;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   z-index: -1;
   box-shadow: 0 0 10px -6px, inset 0 0 0px 1px #fff;
   margin: 8px 0;
@@ -185,7 +186,7 @@
   left: 12px;
   width: 0;
   height: 0;
-  border-bottom: 6px solid #BBB;
+  border-bottom: 6px solid #bbb;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   margin-top: 3px;
@@ -193,19 +194,19 @@
 
 .selectric-items:after {
   margin-top: 4px;
-  border-bottom-color: #FFF;
+  border-bottom-color: #fff;
 }
 
 .selectric-above .selectric-items:before,
 .selectric-above .selectric-items:after {
   top: 100%;
   border-bottom-width: 0;
-  border-top: 6px solid #BBB;
+  border-top: 6px solid #bbb;
   margin-top: 0;
 }
 
 .selectric-above .selectric-items:after {
-  border-top-color: #FFF;
+  border-top-color: #fff;
   margin-top: -1px;
 }
 
@@ -214,11 +215,12 @@
   bottom: 100%;
 }
 
-.selectric-items ul, .selectric-items li {
+.selectric-items ul,
+.selectric-items li {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 20px;
   min-height: 20px;
 }
@@ -233,12 +235,12 @@
 }
 
 .selectric-items li.selected {
-  background: #E0E0E0;
+  background: #e0e0e0;
   color: #444;
 }
 
 .selectric-items li.highlighted {
-  background: #D0D0D0;
+  background: #d0d0d0;
   color: #444;
 }
 
@@ -250,10 +252,11 @@
   right: -10px;
   width: 30px;
   height: 100%;
-  background: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTIgMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEwIj48cGF0aCBkPSJNMCA1YzAtLjIyNC4wNzItLjQxNS4yMTctLjU3MmwxLjA1My0xLjE0NWMuMTQ0LS4xNTcuMzItLjIzNi41MjYtLjIzNi4yMDYgMCAuMzgyLjA3OS41MjYuMjM2bDIuMjc2IDIuNDgzIDUuMDc5LTUuNTNjLjE0NS0uMTU3LjMyLS4yMzYuNTI2LS4yMzYuMjA2IDAgLjM4Mi4wNzkuNTI2LjIzNmwxLjA1MyAxLjE0NWMuMTQ0LjE1Ny4yMTcuMzQ4LjIxNy41NzIgMCAuMjI0LS4wNzIuNDE1LS4yMTcuNTcybC02LjY1OCA3LjIzOWMtLjE0NC4xNTctLjMyLjIzNi0uNTI2LjIzNi0uMjA2IDAtLjM4Mi0uMDc5LS41MjYtLjIzNmwtMy44NTYtNC4xOTJjLS4xNDUtLjE1Ny0uMjE3LS4zNDgtLjIxNy0uNTcyeiIgZmlsbD0iI2JiYiIvPjwvc3ZnPgo=) no-repeat 50% 50%;
+  background: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTIgMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEwIj48cGF0aCBkPSJNMCA1YzAtLjIyNC4wNzItLjQxNS4yMTctLjU3MmwxLjA1My0xLjE0NWMuMTQ0LS4xNTcuMzItLjIzNi41MjYtLjIzNi4yMDYgMCAuMzgyLjA3OS41MjYuMjM2bDIuMjc2IDIuNDgzIDUuMDc5LTUuNTNjLjE0NS0uMTU3LjMyLS4yMzYuNTI2LS4yMzYuMjA2IDAgLjM4Mi4wNzkuNTI2LjIzNmwxLjA1MyAxLjE0NWMuMTQ0LjE1Ny4yMTcuMzQ4LjIxNy41NzIgMCAuMjI0LS4wNzIuNDE1LS4yMTcuNTcybC02LjY1OCA3LjIzOWMtLjE0NC4xNTctLjMyLjIzNi0uNTI2LjIzNi0uMjA2IDAtLjM4Mi0uMDc5LS41MjYtLjIzNmwtMy44NTYtNC4xOTJjLS4xNDUtLjE1Ny0uMjE3LS4zNDgtLjIxNy0uNTcyeiIgZmlsbD0iI2JiYiIvPjwvc3ZnPgo=)
+    no-repeat 50% 50%;
   opacity: 0;
-  -webkit-transition: .2s;
-          transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .selectric-items li.selected:after {
@@ -262,7 +265,7 @@
 }
 
 .selectric-items li:hover {
-  background: #F0F0F0;
+  background: #f0f0f0;
   color: #444;
 }
 
@@ -273,9 +276,9 @@
   background: none !important;
   color: #666 !important;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .selectric-items .selectric-group .selectric-group-label {
@@ -283,9 +286,9 @@
   padding-left: 10px;
   cursor: default;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   background: none;
   color: #444;
 }
