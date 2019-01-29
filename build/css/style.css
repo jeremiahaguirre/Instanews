@@ -179,8 +179,7 @@ header {
   @media (min-width: 1000px) {
     header {
       padding-left: 10%;
-      margin-top: 20%;
-      margin-left: 27%; } }
+      margin-top: 20%; } }
   @media (min-width: 600px) {
     header .image-header {
       -webkit-box-orient: horizontal;
@@ -294,10 +293,8 @@ select {
       .info-section .info-text {
         top: 63%; } }
 
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 10%;
-  width: 100%;
-  padding-top: 40px; }
+footer p {
+  padding-left: 1%;
+  padding-top: 13%;
+  color: white;
+  text-align: center; }
