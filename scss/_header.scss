@@ -7,12 +7,13 @@ header {
   max-width: $container-max-width;
   width: 100%;
   padding-top: 20%;
+  transition: all 1s ease-in-out 0s;
 
   @include tablet {
     flex-direction: row;
     width: 460px;
     padding-left: 18%;
-    padding-top: unset;
+    padding-top: 20px;
     margin-top: 30%;
     margin-left: 7%;
   }
@@ -20,7 +21,6 @@ header {
   @include desktop {
     padding-left: 10%;
     margin-top: 20%;
-    
   }
 
   .image-header {

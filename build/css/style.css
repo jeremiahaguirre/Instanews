@@ -164,7 +164,9 @@ header {
           flex: 0 1 auto;
   max-width: 1800px;
   width: 100%;
-  padding-top: 20%; }
+  padding-top: 20%;
+  -webkit-transition: all 1s ease-in-out 0s;
+  transition: all 1s ease-in-out 0s; }
   @media (min-width: 600px) {
     header {
       -webkit-box-orient: horizontal;
@@ -173,7 +175,7 @@ header {
               flex-direction: row;
       width: 460px;
       padding-left: 18%;
-      padding-top: unset;
+      padding-top: 20px;
       margin-top: 30%;
       margin-left: 7%; } }
   @media (min-width: 1000px) {
