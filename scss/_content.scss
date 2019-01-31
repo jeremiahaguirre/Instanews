@@ -73,18 +73,14 @@ select {
 
   .info-text {
     background: rgba(0, 0, 0, 0.7);
+    display: flex;
     color: white;
     text-align: left;
     position: absolute;
-    font-size: 16px;
+    font-size: 1em;
     padding: 1em;
-    top: 60%;
-
-    @include tablet {
-      top: 70%;
-    }
-    @include desktop {
-      top: 63%;
-    }
+    bottom:0;
+    width:100%;
+    line-height: 27px;
   }
 }

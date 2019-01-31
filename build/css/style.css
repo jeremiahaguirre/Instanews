@@ -280,18 +280,17 @@ select {
         padding-bottom: 20%; } }
   .info-section .info-text {
     background: rgba(0, 0, 0, 0.7);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     color: white;
     text-align: left;
     position: absolute;
-    font-size: 16px;
+    font-size: 1em;
     padding: 1em;
-    top: 60%; }
-    @media (min-width: 600px) {
-      .info-section .info-text {
-        top: 70%; } }
-    @media (min-width: 1000px) {
-      .info-section .info-text {
-        top: 63%; } }
+    bottom: 0;
+    width: 100%;
+    line-height: 27px; }
 
 footer p {
   padding-left: 1%;

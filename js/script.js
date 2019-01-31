@@ -9,6 +9,7 @@ $(function() {
 
   $("#me-select-menu").on("change", function() {
     const sectionName = $(this).val();
+
     //clear stories
     $(".ul-info").empty();
     $(".img-header").addClass("after-select");
