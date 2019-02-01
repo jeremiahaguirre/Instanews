@@ -132,8 +132,8 @@ table {
 
 @font-face {
   font-family: "Open Sans-Light";
-  src: url("./fonts/OpenSans-Light.eot");
-  src: url("./fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("./fonts/OpenSans-Light.woff") format("woff"), url("./fonts/OpenSans-Light.ttf") format("truetype"), url("./fonts/OpenSans-Light.svg") format("svg");
+  src: url("../../fonts/OpenSans-Light.eot");
+  src: url("../../fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/OpenSans-Light.woff") format("woff"), url("../../fonts/OpenSans-Light.ttf") format("truetype"), url("../../fonts/OpenSans-Light.svg") format("svg");
   font-weight: 300;
   font-style: normal; }
 
@@ -297,5 +297,9 @@ select {
 footer p {
   padding-left: 1%;
   padding-top: 13%;
-  color: white;
+  font-size: 0.9rem;
+  color: #c2c2c2;
   text-align: center; }
+
+.text-transform {
+  text-transform: uppercase; }
