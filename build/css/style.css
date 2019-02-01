@@ -299,3 +299,6 @@ footer p {
   padding-top: 13%;
   color: white;
   text-align: center; }
+  @media (min-width: 600px) {
+    footer p {
+      text-align: left; } }

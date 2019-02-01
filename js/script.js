@@ -37,15 +37,12 @@ $(function() {
           }
         });
         const sliceData = imageOnly.slice(0, 12);
+        let articleHtml = "";
         $.each(sliceData, function(index, value) {
-          console.log(value);
-
-          $(".ul-info").append(
-            htmlChange(value.url, value.multimedia[4].url, value.abstract)
-          );
-          console.log(
-            htmlChange(value.url, value.multimedia[0].url, value.abstract)
-          );
+          articleHtml =
+            articleHtml +
+            htmlChange(value.url, value.multimedia[4].url, value.abstract);
+          console.log(articleHtml);
 
           function htmlChange(url, multimedia, abstract) {
             return (
@@ -63,6 +60,7 @@ $(function() {
             );
           }
         });
+        $(".ul-info").append(articleHtml);
       })
       .fail(function() {
         $(".info-section").empty();

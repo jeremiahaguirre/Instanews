@@ -1,7 +1,10 @@
 footer p {
-  padding-left:1%;
+  padding-left: 1%;
   padding-top: 13%;
   color: white;
   text-align: center;
 
+  @include tablet {
+    text-align: left;
+  }
 }
