@@ -13,7 +13,7 @@ select {
   font-family: "Open Sans-Light";
   font-size: $standerd-font;
   margin-left: 10px;
-  font-size:30px;
+  font-size: 30px;
 
   &:focus {
     outline: none;
@@ -31,7 +31,7 @@ select {
     padding-top: 1%;
   }
 
-  .ul-info {
+  .app-info {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -40,8 +40,9 @@ select {
   .info-href {
     text-decoration: none;
     color: white;
-    list-style: none;
     text-align: center;
+    padding-top: 100%;
+    width: 100%;
   }
   .info-list-item {
     overflow: hidden;
@@ -61,13 +62,13 @@ select {
       display: flex;
       flex: 1 0 50%;
       background-position: center;
-      padding-top: 5%;
+      padding:0;
     }
 
     @include desktop {
       display: flex;
       flex: 1 0 25%;
-      padding-bottom: 20%;
+      padding:0;
     }
   }
 
@@ -79,8 +80,8 @@ select {
     position: absolute;
     font-size: 1em;
     padding: 1em;
-    bottom:0;
-    width:100%;
+    bottom: 0;
+    width: 100%;
     line-height: 27px;
   }
 }

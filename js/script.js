@@ -1,6 +1,6 @@
 $(function() {
   console.log("Welcome to Instanews");
-  $(function() {
+  $(() => {
     $("select").selectric({
       maxHeight: 100,
       openOnHover: true
@@ -11,7 +11,7 @@ $(function() {
     const sectionName = $(this).val();
 
     //clear stories
-    $(".ul-info").empty();
+    $(".app-info").empty();
     $(".img-header").addClass("after-select");
     //show loader
     $(".image").before(
@@ -27,9 +27,7 @@ $(function() {
       dataType: "json"
     })
       .done(function(data) {
-        console.log(data);
         const imageOnly = data.results.filter(function(item) {
-          console.log(item);
           if (item.multimedia[4] !== undefined) {
             return true;
           } else {
@@ -42,25 +40,16 @@ $(function() {
           articleHtml =
             articleHtml +
             htmlChange(value.url, value.multimedia[4].url, value.abstract);
-          console.log(articleHtml);
 
           function htmlChange(url, multimedia, abstract) {
-            return (
-              "<li class='info-list-item box' style='background-image: url(" +
-              multimedia +
-              ")'>" +
-              "<a class='info-href' target='_blank' href=" +
-              url +
-              ">" +
-              "<p class='info-text'>" +
-              abstract +
-              "</p>" +
-              "</a>" +
-              "</li>"
-            );
+            return `<article class='info-list-item box' style='background-image: url(${multimedia})'>
+            <a class='info-href' target='_blank' href='${url}'>
+            <p class='info-text'>${abstract}</p>
+            </a>
+            </article>`;
           }
         });
-        $(".ul-info").append(articleHtml);
+        $(".app-info").append(articleHtml);
       })
       .fail(function() {
         $(".info-section").empty();
