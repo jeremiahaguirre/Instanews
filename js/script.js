@@ -3,7 +3,7 @@ $(function() {
   $(() => {
     $("select").selectric({
       maxHeight: 100,
-      openOnHover: true
+      openOnHover: false
     });
   });
 
@@ -15,15 +15,12 @@ $(function() {
     $(".img-header").addClass("after-select");
     //show loader
     $(".image").before(
-      "<img class='loading' src='./images/ajax-loader.gif' width='50px' height='50px' />"
+      `<img class='loading' src='./images/ajax-loader.gif' width='50px' height='50px' />`
     );
     //make our ajax request
     $.ajax({
       method: "GET",
-      url:
-        "https://api.nytimes.com/svc/topstories/v2/" +
-        sectionName +
-        ".json?api-key=noZerIXUAIZvYVXkARxs4Jc06FKYpAsE",
+      url: `https://api.nytimes.com/svc/topstories/v2/${sectionName}.json?api-key=noZerIXUAIZvYVXkARxs4Jc06FKYpAsE`,
       dataType: "json"
     })
       .done(function(data) {
